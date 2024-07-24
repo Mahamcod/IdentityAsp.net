@@ -1,0 +1,389 @@
+﻿/*body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}*/
+
+/* Set padding to keep content from hitting the edges */
+/*.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}*/
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+/*.dl-horizontal dt {
+    white-space: normal;
+}*/
+
+/* Set width on the form input elements since they're 100% wide by default */
+/*input,
+select,
+textarea {
+    max-width: 280px;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+/*.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}*/
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+/*.dl-horizontal dt {
+    white-space: normal;
+}*/
+
+/* Set width on the form input elements since they're 100% wide by default */
+/*input,
+select,
+textarea {
+    max-width: 280px;
+}*/
+/*body {
+    padding: 0;
+    margin: 0;*/
+    /*background-color: grey;*/
+/*}*/
+
+/*/*Set padding to keep content from hitting the edges*/
+/*.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}*/
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/*Set width on the form input elements since they're 100% wide by default*/
+input,
+select,
+textarea {
+    max-width: 250px;
+}
+/*Contact form specific styles*/
+
+
+
+.navbar-nav .nav-link:hover {
+    font-weight: bold;
+    color: white !important; /* Important to override Bootstrap styles */
+}
+
+.dropdown-menu .dropdown-item {
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Border style for dropdown items */
+}
+
+
+
+@import 'https://fonts.googleapis.com/css?family=Lato|Roboto+Slab:700';
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/*body {
+    background: #f1f1f1;
+    color: #444;
+    font-family: "Lato", sans-serif;
+    font-size: 1em;
+    line-height: 1.625;
+}
+*/
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3 {
+    font-family: "Roboto Slab", serif;
+}
+
+.wrap {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.gallery-wrap,
+#gallery {
+    overflow: hidden;
+}
+
+#filters {
+    margin: 1%;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+    #filters li {
+        float: left;
+    }
+
+        #filters li span {
+            display: block;
+            padding: 5px 20px;
+            text-decoration: none;
+            color: #666;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all ease-in-out 0.25s;
+        }
+
+        #filters li:hover span {
+            color: #000;
+        }
+
+        #filters li span.active {
+            background: #1fbae7;
+            color: #fff;
+        }
+
+.gallery-item {
+    float: left;
+    width: 33.333%;
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+    display: none;
+}
+
+.inside {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.details,
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+}
+
+    .details h2 {
+        color: #fff;
+        font-size: 1.5em;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-align: center;
+        margin: 0;
+    }
+
+    .details p {
+        color: #fff;
+        font-size: 1em;
+        letter-spacing: 2px;
+        text-align: center;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+.inside img {
+    float: left;
+    width: 100%;
+}
+
+.overlay {
+    background: rgba(31, 186, 231, 0.8);
+    z-index: 1;
+    transition: all 0.7s ease-in-out;
+}
+
+.gallery-item:hover .details,
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+@media (max-width: 30em) {
+    .wrap {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    .gallery-item {
+        float: none;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*index page styling*/
+
+.video-container {
+    /*position: relative;*/
+    overflow: hidden;
+    height: 100vh; /* Full viewport height */
+    /*width:100vw;*/
+    /*margin-left:0;*/
+}
+
+    .video-container video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Cover to fill container while maintaining aspect ratio */
+        z-index: -1; /* Ensure video is behind content */
+    }
+
+.content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Full height of the container */
+    flex-direction: column;
+}
+
+    .content h1, .content p {
+        color: white;
+    }
+
+    .content .svg-icon {
+        fill: currentColor;
+        cursor: pointer;
+    }
+
+.article-list {
+    color: #313437;
+    background-color: #fff;
+    /*width: 100%;*/ /* Full viewport width */
+    /*height: 100vh;*/ /* Full viewport height */
+    /*overflow: hidden;*/
+}
+
+
+    .article-list p {
+        color: #7d8285;
+    }
+
+    .article-list h2 {
+        font-weight: bold;
+        margin-bottom: 40px;
+        padding-top: 40px;
+        color: inherit;
+    }
+
+@media (max-width:767px) {
+    .article-list h2 {
+        margin-bottom: 25px;
+        padding-top: 25px;
+        font-size: 24px;
+    }
+}
+
+.article-list .intro {
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+    .article-list .intro p {
+        margin-bottom: 0;
+    }
+
+.article-list .articles {
+    padding-bottom: 40px;
+}
+
+.article-list .item {
+    padding-top: 50px;
+    min-height: 425px;
+    text-align: center;
+}
+
+    .article-list .item .name {
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 20px;
+        color: inherit;
+    }
+
+    .article-list .item .description {
+        font-size: 14px;
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+
+    .article-list .item .action {
+        font-size: 24px;
+        width: 24px;
+        margin: 22px auto 0;
+        line-height: 1;
+        display: block;
+        color: #4f86c3;
+        opacity: 0.85;
+        transition: opacity 0.2s;
+        text-decoration: none;
+    }
+
+        .article-list .item .action:hover {
+            opacity: 1;
+        }
+

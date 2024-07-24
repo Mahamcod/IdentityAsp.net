@@ -1,0 +1,103 @@
+﻿@using IdentityAsp.net.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+}
+
+@*<h2 class="text-center">@ViewBag.Title</h2>*@
+<div class="row justify-content-center mt-5">
+    <div class="col-md-4">
+        <!-- Reduced column width -->
+        <section id="loginForm">
+            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                <h4 class="form-heading">Log in</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Email, new { @class = "control-label" })
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Password, new { @class = "control-label" })
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    <div class="checkbox">
+                        @Html.CheckBoxFor(m => m.RememberMe)
+                        @Html.LabelFor(m => m.RememberMe)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">Log in</button>
+                </div>
+                <p class="text-center">
+                    @Html.ActionLink("Register as a new user", "Register", null, new { @class = "link-primary" })
+                </p>
+                @* Enable this once you have account confirmation enabled for password reset functionality
+                    <p class="text-center">
+                        @Html.ActionLink("Forgot your password?", "ForgotPassword", null, new { @class = "link-primary" })
+                    </p>*@
+            }
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+<style>
+    .bg-dark {
+        background-color: #343a40 !important;
+    }
+
+    #loginForm {
+        background-color: #ffffff;
+        padding: 30px; /* Reduced padding */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e3e3e3;
+    }
+
+    .form-heading {
+        margin-bottom: 20px;
+        font-size: 20px; /* Adjusted font size */
+        color: #333;
+    }
+
+    .form-group {
+        margin-bottom: 15px; /* Reduced margin */
+    }
+
+    .control-label {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        color: #ffffff;
+    }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+
+    .link-primary {
+        color: #007bff;
+    }
+
+        .link-primary:hover {
+            color: #0056b3;
+        }
+
+    .text-center {
+        text-align: center;
+    }
+</style>
